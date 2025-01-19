@@ -664,6 +664,10 @@
         font-family: Rubik;
         font-weight: 700;
         line-height: 1.5;
+        @media (max-width:767px) {
+          font-size: 42px;
+          line-height: 1.4;
+        }
       }
       .thq-heading-2 {
         font-size: 35px;
@@ -1167,6 +1171,15 @@
         position: relative;
         justify-content: center;
         background-color: var(--dl-color-theme-neutral-light);
+      }
+      .logo-text{  
+        font-size: 2.2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-shadow: 4px 0px 4px #6a6a6a;
+        @media (max-width: 767px){
+          font-size: 1.5rem;
+        }
       }
       .navbar-navbar-interactive {
         width: 100%;
@@ -3242,11 +3255,7 @@
         <div class="home-navbar">
           <header class="navbar-container">
             <header data-thq="thq-navbar" class="navbar-navbar-interactive">
-              <img
-                alt="Bootcamp Training Startup"
-                src="logo.webp"
-                class="navbar-image1"
-              />
+              <span class="logo-text">TechBootcamp</span>
               <div data-thq="thq-navbar-nav" class="navbar-desktop-menu">
                 <!-- <nav class="navbar-links">
                   <span class="thq-link thq-body-small">Home</span
