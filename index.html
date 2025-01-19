@@ -3245,7 +3245,7 @@
         }
       }
     </style>
-    
+
     <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-07K4GCKBGC"></script>
   <script>
@@ -3275,9 +3275,8 @@
                   ><span class="thq-link thq-body-small">Link5</span>
                 </nav> -->
                 <div class="navbar-buttons">
-                  <a href="https://forms.gle/P1wQDsmDg5UEtFsf6" target="_blank" class="navbar-action1 thq-button-animated thq-button-filled"
-                  >
-                    <span class="thq-body-small">Register for free</span></a
+                  <a href="https://forms.gle/P1wQDsmDg5UEtFsf6" target="_blank" class="navbar-action1 thq-button-animated thq-button-filled thq-body-small" id="headerBtn" data-location="header">
+                    Register for free</a
                   >
                 </div>
               </div>
@@ -3329,8 +3328,8 @@
                 </p>
               </div>
               <div class="hero-actions">
-                <a href="https://forms.gle/P1wQDsmDg5UEtFsf6" target="_blank" class="thq-button-filled hero-button">
-                  <span class="thq-body-small">Enroll Now</span></a
+                <a href="https://forms.gle/P1wQDsmDg5UEtFsf6" target="_blank" class="thq-button-filled hero-button thq-body-small" id="hero" data-location="hero">
+                  Enroll Now</a
                 >
               </div>
             </div>
@@ -3451,7 +3450,7 @@
                     </div>
                     <div class="cta-actions">
                       <a href="https://forms.gle/P1wQDsmDg5UEtFsf6" target="_blank"
-                        class="thq-button-filled cta-button"
+                        class="thq-button-filled cta-button" id="program" data-location="program"
                       >
                         Explore program !!!
                       </a>
@@ -3523,9 +3522,9 @@
                   </p>
                   <div class="steps-actions">
                     <a href="https://forms.gle/P1wQDsmDg5UEtFsf6" target="_blank"
-                      class="thq-button-animated thq-button-filled steps-button"
+                      class="thq-button-animated thq-button-filled steps-button thq-body-small" id="sticky" data-location="sticky"
                     >
-                      <span class="thq-body-small">Submit details</span>
+                      Submit details
                     </a>
                   </div>
                 </div>
@@ -3834,5 +3833,21 @@
 
       </div>
     </div>
+
+    <script>
+document.addEventListener('click', function(event) {
+    // Check if clicked element is a button we want to track
+    if (event.target.matches('a[data-location]')) {
+        gtag('event', 'button_click', {
+            'button_name': event.target.textContent,
+            'button_location': event.target.dataset.location,
+            'page_url': window.location.href
+        });
+    }
+    
+});
+
+    </script>
+
   </body>
 </html>
